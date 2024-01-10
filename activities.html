@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro">
+    <style>
+        @font-face {
+            font-family: 'Tan Nimbus';
+            src: url('./TAN-NIMBUS.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('./Untitled\ design.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            color: white;
+            font-family: 'Tan Nimbus', sans-serif;
+        }
+
+        nav {
+            background-color: #333;
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+            display: flex;
+            /* Added display: flex; to align items horizontally */
+            justify-content: center;
+            /* Center the items horizontally */
+        }
+
+        nav a {
+            position: relative;
+            display: block;
+            text-transform: uppercase;
+            color: #FFDE59;
+            text-decoration: none;
+            margin: 0 50px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: .5s;
+            z-index: 1;
+        }
+
+        nav a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-top: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            transform: scaleY(2);
+            opacity: 0;
+            transition: .3s;
+        }
+
+        nav a:after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            transform: scale(0);
+            opacity: 0;
+            transition: .3s;
+            z-index: -1;
+        }
+
+        nav a:hover,
+        nav a.active {
+            /* Added style for the active link */
+            color: #333;
+        }
+
+        nav a:hover:before,
+        nav a.active:before {
+            /* Added style for the active link */
+            transform: scaleY(1);
+            opacity: 1;
+        }
+
+        nav a:hover:after,
+        nav a.active:after {
+            /* Added style for the active link */
+            transform: scaleY(1);
+            opacity: 1;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 25px;
+            background-color: #FFDE59;
+            color: rgb(65, 124, 227);
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            transform: scale(1.2);
+        }
+
+        .file-display {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            max-width: 600px;
+            width: 100%;
+            text-align: left;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        
+        }
+
+        .file-box {
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .file-item {
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .file-info {
+            padding: 10px;
+        }
+
+        .file-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .file-preview {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 0 0 10px 10px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <nav>
+        <a href="./main.html">Home</a>
+        <a href="./project.html">Explore The Globe</a>
+        <a href="./activities.html" class="active">Lab Activities</a>
+        <a href="./about me.html">About Me</a>
+        <a href="./gallery.html">Gallery</a>
+    </nav>
+
+    <div class="file-display">
+        <div class="file-box">
+            <div class="file-item">
+                <a href="./act1.html" target="_blank" class="file-link">
+                    <div class="file-info">
+                        <div class="file-name">Activity 1</div>
+                    </div>
+                    <a href="./act1.html" target="_blank">
+                        <img src="./preview act 1.png" alt="File Preview" class="file-preview">
+                    </a>
+                </a>
+            </div>
+        </div>
+    
+        <div class="file-box">
+            <div class="file-item">
+                <a href="./act2.html" target="_blank" class="file-link">
+                    <div class="file-info">
+                        <div class="file-name">Activity 2</div>
+                        <!-- Add more file information as needed -->
+                    </div>
+                    <a href="./act2.html" target="_blank">
+                        <img src="./preview act 2.png" alt="File Preview" class="file-preview">
+                    </a>
+                </a>
+            </div>
+        </div>
+
+        <div class="file-box">
+            <div class="file-item">
+                <a href="./act3.html" target="_blank" class="file-link">
+                    <div class="file-info">
+                        <div class="file-name">Activity 3</div>
+                        <!-- Add more file information as needed -->
+                    </div>
+                    <a href="./act3.html" target="_blank">
+                        <img src="./preview act 3.png" alt="File Preview" class="file-preview">
+                    </a>
+                </a>
+            </div>
+        </div>
+
+        <div class="file-box">
+            <div class="file-item">
+                <a href="./act3HTML_List.html" target="_blank" class="file-link">
+                    <div class="file-info">
+                        <div class="file-name">Activity 3.1</div>
+                        <!-- Add more file information as needed -->
+                    </div>
+                    <a href="./act3HTML_List.html" target="_blank">
+                        <img src="./preview act 3.1.png" alt="File Preview" class="file-preview">
+                    </a>
+                </a>
+            </div>
+        </div>
+        
+        <div class="file-box">
+            <div class="file-item">
+                <a href="./act 4.html" target="_blank" class="file-link">
+                    <div class="file-info">
+                        <div class="file-name">Activity 4</div>
+                        <!-- Add more file information as needed -->
+                    </div>
+                    <a href="./act 4.html" target="_blank">
+                        <img src="./preview act 4.png" alt="File Preview" class="file-preview">
+                    </a>
+                </a>
+            </div>
+        </div>
+
+        <div class="file-box">
+            <div class="file-item">
+                <a href="./act 5.html" target="_blank" class="file-link">
+                    <div class="file-info">
+                        <div class="file-name">Activity 5</div>
+                        <!-- Add more file information as needed -->
+                    </div>
+                    <a href="./act 5.html" target="_blank">
+                        <img src="./preview act 5.png" alt="File Preview" class="file-preview">
+                    </a>
+                </a>
+            </div>
+        </div>
+    
+        <!-- Add more file boxes as needed -->
+    </div>
+    
+</body>
+
+</html>

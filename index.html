@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro">
+    <style>
+        @font-face {
+            font-family: 'Tan Nimbus';
+            src: url('./TAN-NIMBUS.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('./Untitled\ design.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; 
+            align-items: center;
+            color: white; 
+        }
+
+        h1 {
+            margin: 0; 
+        }
+
+        #my {
+            font-size: 70px; 
+            font-family: 'Tan Nimbus', sans-serif;
+            color: #FFDE59;
+            margin-top: 100px; 
+            transition: transform 0.3s ease-in-out;
+        }
+        #my:hover {
+            transform: scale(1.3);
+        }
+        
+        #web {
+            font-size: 100px;
+            font-family: 'Tan Nimbus', sans-serif;
+            color: #FFDE59;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #web:hover {
+            transform: scale(1.3);
+        }
+
+        #things {
+            font-size: 30px;
+            margin-top: 8px;
+            white-space: nowrap; 
+        }
+
+        #things span {
+            margin: 0 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: rgb(4, 22, 52);
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        #things span::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FFDE59;
+            z-index: -1;
+            transform-origin: left;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #things span:hover::before {
+            transform-origin: right;
+            transform: scaleX(1);
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 25px;
+            background-color: #FFDE59; 
+            color: rgb(65, 124, 227);
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out; 
+        }
+
+        .button:hover {
+            transform: scale(1.2); 
+        }
+    </style>
+</head>
+<body>
+    <h1 id="my">MY</h1>
+    <h1 id="web">WEB!</h1>
+    <p id="things">
+        <span>Project</span> |
+        <span>About Me</span> |
+        <span>Lab Activities</span> |
+        <span>Gallery</span>    
+    </p>
+
+    
+    <a href="./main.html" class="button">PROCEED</a>
+</body>
+</html>
+

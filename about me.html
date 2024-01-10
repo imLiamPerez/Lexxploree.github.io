@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro">
+    <style>
+        @font-face {
+            font-family: 'Tan Nimbus';
+            src: url('./TAN-NIMBUS.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('./Untitled\ design.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; 
+            align-items: center;
+            color: white; 
+            font-family: 'Tan Nimbus', sans-serif;
+        }
+
+        nav {
+            background-color: #333; 
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+            display: flex; 
+            justify-content: center; 
+        }
+
+        nav a {
+            position: relative;
+            display: block;
+            text-transform: uppercase;
+            color: #FFDE59;
+            text-decoration: none;
+            margin: 0 50px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: .5s;
+            z-index: 1;
+        }
+
+        nav a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-top: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            transform: scaleY(2);
+            opacity: 0;
+            transition: .3s;
+        }
+
+        nav a:after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            transform: scale(0);
+            opacity: 0;
+            transition: .3s;
+            z-index: -1;
+        }
+
+        nav a:hover,
+        nav a.active { 
+            color: #333;
+        }
+
+        nav a:hover:before,
+        nav a.active:before { 
+            transform: scaleY(1);
+            opacity: 1;
+        }
+
+        nav a:hover:after,
+        nav a.active:after { 
+            transform: scaleY(1);
+            opacity: 1;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 25px;
+            background-color: #FFDE59; 
+            color: rgb(65, 124, 227);
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out; 
+        }
+
+        .button:hover {
+            transform: scale(1.2); 
+        }
+     
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="./main.html">Home</a>
+        <a href="./project.html">Explore The Globe</a>
+        <a href="./activities.html">Lab Activities</a>
+        <a href="./about me.html" class="active">About Me</a>
+        <a href="./gallery.html">Gallery</a>
+    </nav>
+
+    <section id="about-myself" style="display: flex; justify-content: center; align-items: center; height: 80vh;">
+        <div style="background-color: #333; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+            <img src="./profile.jpg" alt="Your Profile Picture" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px;">
+            <h2 id="typed-name" style="margin-bottom: 10px;"></h2>
+            <p id="typed-paragraph-1" style="color: #777; margin-bottom: 20px;"></p>
+            <p id="typed-paragraph-2"></p>
+            <p id="typed-paragraph-3"></p>
+            
+        </div>
+    </section>
+
+    <script>
+        
+        const typedName = document.getElementById('typed-name');
+        const typedParagraph1 = document.getElementById('typed-paragraph-1');
+        const typedParagraph2 = document.getElementById('typed-paragraph-2');
+        const typedParagraph3 = document.getElementById('typed-paragraph-3');
+
+        const nameText = "Liam Villafuerte";
+        const paragraph1Text = "Hi there! 👋 I'm Liam, a passionate individual with a love for exploration and learning. Currently pursuing Bachelor of Science in Information technology in Eastern Visayas State University and diving into exciting lab activities.";
+        const paragraph2Text = "In my free time, I enjoy playing basketball, surfing, going out with friends, studying, and all the fun things in life. Whether it's doing nothing or sleeping, I find joy in everything. I believe in the power of 'Stupid things, Have Good Outcomes Always.'";
+        const paragraph3Text = "Let's connect and explore the world together! 🌍";
+
+        let indexName = 0;
+        let indexParagraph1 = 0;
+        let indexParagraph2 = 0;
+        let indexParagraph3 = 0;
+
+        function type() {
+            if (indexName < nameText.length) {
+                typedName.innerHTML += nameText.charAt(indexName);
+                indexName++;
+            }
+            if (indexParagraph1 < paragraph1Text.length) {
+                typedParagraph1.innerHTML += paragraph1Text.charAt(indexParagraph1);
+                indexParagraph1++;
+            }
+            if (indexParagraph2 < paragraph2Text.length) {
+                typedParagraph2.innerHTML += paragraph2Text.charAt(indexParagraph2);
+                indexParagraph2++;
+            }
+            if (indexParagraph3 < paragraph3Text.length) {
+                typedParagraph3.innerHTML += paragraph3Text.charAt(indexParagraph3);
+                indexParagraph3++;
+            }
+
+            setTimeout(type, 50); 
+        }
+
+        
+        window.onload = type;
+    </script>
+</body>
+</html>

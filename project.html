@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anonymous+Pro">
+    <style>
+        @font-face {
+            font-family: 'Tan Nimbus';
+            src: url('./TAN-NIMBUS.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('Untitled design.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; 
+            align-items: center;
+            color: white; 
+            font-family: 'Tan Nimbus', sans-serif;
+        }
+        h1 {
+            margin: 0; 
+            
+        }
+
+        #country {
+            font-size: 30px; 
+            font-family: 'Tan Nimbus', sans-serif;
+            color: #efefef;
+            margin-top: 50px; 
+            transition: transform 0.3s ease-in-out;
+        }
+        #country:hover {
+            transform: scale(1.3);
+        }
+        nav {
+            background-color: #333; 
+            width: 100%;
+            padding: 15px 0;
+            text-align: center;
+            display: flex; /* Added display: flex; to align items horizontally */
+            justify-content: center; /* Center the items horizontally */
+        }
+
+        nav a {
+            position: relative;
+            display: block;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 50px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: .5s;
+            z-index: 1;
+        }
+
+        nav a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-top: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+            transform: scaleY(2);
+            opacity: 0;
+            transition: .3s;
+        }
+
+        nav a:after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            transform: scale(0);
+            opacity: 0;
+            transition: .3s;
+            z-index: -1;
+        }
+
+        nav a:hover,
+        nav a.active { /* Added style for the active link */
+            color: #333;
+        }
+
+        nav a:hover:before,
+        nav a.active:before { /* Added style for the active link */
+            transform: scaleY(1);
+            opacity: 1;
+        }
+
+        nav a:hover:after,
+        nav a.active:after { /* Added style for the active link */
+            transform: scaleY(1);
+            opacity: 1;
+        }
+
+        table {
+            margin-top: 15px;
+        }
+
+        td {
+            padding: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        a img {
+            display: block;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        a:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Style for the section containing the description */
+        section {
+            margin: 50px; 
+            text-align: justify;
+            margin-top: 170px;
+            align-items: center;
+            color: rgb(255, 255, 255);
+        }
+        
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="./main.html">Home</a>
+        <a href="./project.html" class="active">Explore the Globe</a>
+        <a href="./activities.html">Lab Activities</a>
+        <a href="./about me.html">About Me</a>
+        <a href="./gallery.html">Gallery</a>
+    </nav>
+    <h1 id="country">CHOOSE A COUNTRY!</h1>
+    <table align="center">
+        <tr>
+            <td align="left">
+                <a href="#asia"><img src="./asia.jpg" alt="Asia" border="1" height="350" width="400" href></a>
+                <br>
+                <a href="#asia" style="color:white"><center><font size="5"><font color="#FFDE59">Asian Adventures</center></font></font></a>
+            </td>
+        
+            <td align="center">
+                <a href="#europe"><img src="./europe.jpg" alt="Europe" border="1" height="350" width="400" href></a>
+                <br>
+                <a href="#europe" style="color:white"><center><font size="5"><font color="#FFDE59">European Adventures</center></font></font></a>
+            </td>
+        
+            <td align="left">
+                <a href="#american"><img src="./america.jpg" alt="America" border="1" height="350" width="400" href></a>
+                <br>
+                <a href="#american" style="color:white"><center><font size="5"><font color="#FFDE59">American Adventures</center></font></font></a>
+            </td>
+        </tr>
+    </table> 
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="https://www.cebupacificair.com/" target="_blank" style="text-decoration: none;">
+            <button style="padding: 15px 30px; background-color: #FFDE59; color: #333; border: none; border-radius: 8px; cursor: pointer; font-family: 'Tan Nimbus', sans-serif; font-size: 18px;">
+                Book Your Tickets Here!
+            </button>
+        </a>
+    </div>
+    <br>
+
+    <section id="asia">
+        <br>
+        <br>
+        <h1 align="center" style="font-size: 50px;">ASIA</font></h1>
+        <p style="background-color: rgb(1, 72, 75); padding: 25px; border-radius: 15px;">Embark on an extraordinary 
+        journey through the diverse landscapes and captivating cultures of Asia, a continent that invites travelers 
+        into a world of enchantment and discovery. From the bustling markets that pulse with vibrant energy to the 
+        serene landscapes that inspire awe, Asia is a vast canvas of experiences waiting to be explored.</p>
+        <br>
+        <br>
+        <h2 align="center" style="font-weight: bold; font-style: italic; background-color:rgb(1, 72, 75); padding: 20px; 
+        border-radius: 15px; color: #FFDE59; font-size: 40px;">JAPAN
+        </h2>
+     <img src="./tokyo.jpg" alt="Tokyo" height="510" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Tokyo</span>, 
+            Japan's vibrant capital, seamlessly fuses ancient traditions with cutting-edge technology, making it 
+            an unparalleled destination for travelers. The city's skyline is a captivating mix of historic temples like
+            Meiji Shrine and contemporary landmarks such as the Tokyo Skytree, showcasing a harmonious coexistence of the 
+            old and the new. A stroll through districts like Asakusa and Akihabara reveals Tokyo's rich cultural tapestry, from 
+            centuries-old shrines to bustling hubs of technological innovation and pop culture.</p>
+            <p>Beyond the urban landscape, Tokyo offers diverse culinary experiences, from traditional sushi in Tsukiji to avant-garde
+            dining options. The city's efficient public transportation system makes exploring its varied neighborhoods, each with 
+            its own unique charm, a seamless adventure. Tokyo's allure lies in its ability to cater to a spectrum of interests, be 
+            it fashion in Shibuya, upscale shopping in Ginza, or tranquil respites in Ueno Park. With a perfect blend of historical 
+            richness and modern dynamism, Tokyo stands as an unmissable destination, promising a kaleidoscopic journey for every 
+            traveler.</p>
+     </div>
+     <br>
+     <img src="./kyoto.jpg" alt="Kyoto" height="598.5" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Kyoto</span>, 
+            Japan, invites travelers to step into a timeless realm where tradition and beauty intertwine seamlessly. The city's 
+            historic temples and shrines, such as Fushimi Inari Taisha and Kinkaku-ji, showcase architectural marvels and spiritual 
+            significance. In spring, Kyoto transforms into a cherry blossom haven during the Hanami season, while its geisha 
+            districts, like Gion and Pontocho, offer a glimpse into the city's rich cultural past. Kyoto's commitment to preserving 
+            its historic charm is evident in its well-maintained traditional tea houses, Japanese gardens, and the iconic wooden machiya 
+            houses that line its historic streets. The city's festivals and rituals, combined with its dedication to cultural heritage, 
+            make Kyoto an immersive and enchanting destination, where visitors can experience the elegance and tranquility of traditional 
+            Japan.</p>
+            <p>Immersing oneself in the art of the tea ceremony, wandering through picturesque Japanese gardens, and partaking in vibrant 
+            seasonal festivals provide visitors with a profound connection to Kyoto's rich cultural tapestry. The city's ability to 
+            balance the preservation of tradition with the comforts of modernity offers a unique travel experience. Kyoto beckons those 
+            seeking an unforgettable journey, where every cobblestone street and ancient structure tells a story of Japan's past, making 
+            it an indispensable destination for travelers in search of an authentic and enchanting adventure.</p>
+     </div>
+     <br>
+     <img src="./sapporo.jpg" alt="Sapporo" height="533" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Sapporo</span>, the dynamic 
+            capital of Hokkaido, Japan, is a captivating destination offering a perfect blend of winter wonder, culinary delights, 
+            and rich culture. Renowned for the world-famous Sapporo Snow Festival, the city transforms into a magical winter landscape 
+            with colossal ice sculptures and intricate snow statues, creating a unique experience for snow enthusiasts. The local cuisine, 
+            including savory miso ramen and fresh seafood, adds to the city's allure, while iconic landmarks like the Sapporo Clock Tower 
+            and Maruyama Park showcase its historical and natural charm. The friendly atmosphere and warm hospitality of the locals further 
+            enhance the overall appeal, making Sapporo a must-visit destination for those seeking a diverse and unforgettable travel experience.</p>
+            <p>Sapporo's picturesque parks and gardens, such as Moerenuma Park and Maruyama Park, provide serene retreats amidst the urban hustle. 
+            Modern art and nature seamlessly blend in these green spaces, offering a tranquil escape for visitors. With its welcoming atmosphere, 
+            culinary delights, and a harmonious mix of tradition and modernity, Sapporo stands as a remarkable city that caters to the tastes and 
+            interests of diverse travelers, making it an exceptional destination worth exploring.</p>
+        </div>
+        <br>
+        <br>
+        <h2 align="center" style="font-weight: bold; font-style: italic; background-color:rgb(1, 72, 75); padding: 20px; 
+        border-radius: 15px; color: #FFDE59; font-size: 40px;">Philippines
+        </h2>
+     <img src="./siargao.jpg" alt="Siargao" height="445" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Siargao</span>, a jewel in the 
+            Philippine archipelago, beckons travelers with its pristine white-sand beaches, crystal-clear waters, and a laid-back 
+            atmosphere that captures the essence of tropical paradise. Renowned as the "Surfing Capital of the Philippines," Cloud 9's 
+            legendary waves attract surf enthusiasts worldwide, while the iconic boardwalk offers a front-row seat to the thrilling 
+            spectacle. Beyond surfing, Siargao invites exploration of its surrounding islets, each boasting unique landscapes and 
+            vibrant coral gardens during enchanting island-hopping adventures.</p>
+            <p>What sets Siargao apart is not only its natural beauty but also its commitment to sustainable tourism. The warm hospitality 
+            of the Siargaonons, coupled with a rich local culture and a dedication to preserving the island's environment, makes Siargao a 
+            great destination for those seeking a harmonious blend of adventure, relaxation, and responsible travel in this idyllic corner 
+            of the Philippines.</p>
+     </div>
+     <br>
+     <img src="./batanes.jpg" alt="Batanes" height="489" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Batanes</span>, 
+            Batanes, a captivating archipelago in the northern Philippines, beckons with its untamed beauty and rich cultural tapestry. 
+            The landscape is a symphony of rugged cliffs, rolling hills, and serene coastlines, adorned by traditional Ivatan stone 
+            houses that showcase the unique local architecture. Beyond the postcard-perfect scenery, the warmth of the Ivatan people, 
+            their delicious cuisine, and enduring traditions create an immersive experience, making Batanes a compelling destination.</p>
+            <p>What sets Batanes apart is its pristine environment, blessed with a temperate climate that makes it a year-round retreat. 
+            Visitors can explore the untouched terrains, embark on scenic hikes to vantage points like Mt. Iraya, or unwind on secluded 
+            beaches like Valugan Boulder Beach. Batanes' isolation from the hectic pace of modern life preserves its authenticity, offering 
+            travelers a genuine and unspoiled haven where the natural wonders harmonize with a rich cultural heritage, making it an unparalleled 
+            gem for those seeking a soul-stirring escape.
+         </p>
+     </div>
+     <br>
+     <img src="./siqijuor.jpg" alt="Siquijor" height="555" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Siquijor</span>, a small enchanting island 
+            nestled in the heart of the Philippines, is a hidden gem waiting to be discovered by adventurous travelers. Known for its pristine 
+            white-sand beaches, crystal-clear turquoise waters, and lush tropical landscapes, Siquijor offers a serene and idyllic escape from 
+            the hustle and bustle of everyday life. The island is steeped in mystique and folklore, with centuries-old balete trees, mystical 
+            caves, and traditional healing practices adding to its unique charm. Visitors can explore the quaint fishing villages, vibrant coral 
+            reefs, and picturesque waterfalls that dot the landscape, creating a perfect blend of natural beauty and cultural richness.</p>
+            <p>Beyond its stunning natural attractions, Siquijor captivates visitors with its warm and welcoming local community. The island's 
+            inhabitants are known for their hospitality, and travelers can immerse themselves in the rich traditions of Filipino culture 
+            through vibrant festivals and delicious local cuisine. Siquijor's laid-back atmosphere provides the perfect backdrop for relaxation, 
+            making it an ideal destination for those seeking a peaceful retreat. Whether you're a beach lover, a nature enthusiast, or a 
+            cultural explorer, Siquijor offers a diverse range of experiences that make it a truly great place to visit, leaving visitors with 
+            lasting memories of this enchanting island paradise.</p>
+     </div>
+     <br>
+     <br>
+        <h2 align="center" style="font-weight: bold; font-style: italic; background-color:rgb(1, 72, 75); padding: 20px; 
+        border-radius: 15px; color: #FFDE59; font-size: 40px;">Indonesia
+        </h2>
+     <img src="./bali.jpg" alt="Bali" height="600" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Bali</span>, Bali, Indonesia, 
+            is an enchanting island paradise that beckons travelers with its rich tapestry of culture, stunning landscapes, and warm 
+            hospitality. Renowned for its lush rice terraces, vibrant coral reefs, and ancient temples, Bali offers a sensory feast 
+            for those seeking a unique and immersive experience. The island is a harmonious blend of tradition and modernity, where 
+            intricately carved temples coexist with trendy beach clubs, and where the Balinese way of life is steeped in spirituality 
+            and celebration. The bustling markets, fragrant incense wafting from Hindu ceremonies, and the melodic sounds of traditional 
+            Gamelan music create an atmosphere that is both spiritually uplifting and culturally captivating</p>
+            <p>Beyond its cultural allure, Bali is a haven for outdoor enthusiasts and adventure seekers. With world-class surfing 
+            spots, diving and snorkeling opportunities in crystal-clear waters, and trekking trails that wind through emerald-green 
+            landscapes, Bali caters to a diverse range of interests. The island's warm tropical climate ensures that its pristine 
+            beaches are always inviting, while the lush interior presents opportunities for exploration, from cascading waterfalls 
+            to terraced rice fields. Whether you're seeking relaxation in luxurious resorts, spiritual enlightenment in ancient temples,
+            or adrenaline-pumping activities amidst natural wonders, Bali stands as a testament to the notion that paradise can indeed be 
+            found on Earth.</p>
+     </div>
+     <br>
+     <img src="./jakarta.jpg" alt="Jakarta" height="575" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Jakarta</span>, 
+            Jakarta, the vibrant capital city of Indonesia, is a captivating blend of rich cultural heritage and modern urban life. 
+            Nestled on the northwest coast of Java, Jakarta serves as the political, economic, and cultural heart of the nation. The 
+            city is a mosaic of diverse neighborhoods, each offering a unique flavor of Indonesian life. From the historic charm of Kota 
+            Tua, with its colonial-era architecture and bustling markets, to the upscale shopping districts of Menteng and Kemang, Jakarta 
+            presents a dynamic tapestry of experiences. Visitors can explore a myriad of museums, indulge in delectable street food, and 
+            witness the harmonious coexistence of traditional customs and contemporary lifestyles.</p>
+            <p>Beyond its cultural allure, Jakarta is a great place to visit for its cosmopolitan atmosphere and modern amenities. The city 
+            boasts an impressive skyline dotted with skyscrapers, reflecting its status as a major financial hub in Southeast Asia. Shopping 
+            enthusiasts can revel in the luxury malls and bustling markets, while food lovers can embark on a culinary journey sampling the 
+            diverse Indonesian cuisine. Jakarta's warm hospitality, vibrant nightlife, and the juxtaposition of tradition and progress make 
+            it an enticing destination for those seeking an immersive and multifaceted travel experience in the heart of Indonesia.
+         </p>
+     </div>
+     <br>
+     <img src="./ubud.jpg" alt="Ubud" height="576" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Ubud</span>, nestled in the heart of 
+            Bali, Indonesia, is a captivating destination that seamlessly blends cultural richness with serene natural beauty. Surrounded by lush 
+            green landscapes, vibrant rice terraces, and ancient temples, Ubud exudes a tranquil ambiance that captivates the soul of every traveler. 
+            The town is renowned for its thriving arts scene, with numerous galleries showcasing traditional Balinese paintings, intricate woodcarvings, 
+            and exquisite crafts. Ubud's Monkey Forest, a sacred sanctuary home to hundreds of playful long-tailed macaques, adds an element of wildlife 
+            charm to the area, creating an enchanting atmosphere.</p>
+            <p>What makes Ubud truly exceptional is its spiritual and holistic vibe. The town is a hub for yoga and wellness retreats, attracting seekers 
+            of inner peace and self-discovery from around the globe. The Ubud Royal Palace and the ancient Goa Gajah (Elephant Cave) are among the historical 
+            landmarks that offer a glimpse into Bali's rich cultural heritage. The vibrant markets of Ubud, bursting with colorful textiles, handmade jewelry, 
+            and local delicacies, provide an authentic shopping experience. With its welcoming locals, picturesque landscapes, and a harmonious blend of tradition 
+            and modernity, Ubud stands as a must-visit destination for those seeking a transformative and culturally immersive travel experience in Southeast Asia.</p>
+     </div>
+     <div style="text-align: center; margin-top: 20px;">
+        <a href="#country" style="text-decoration: none;">
+            <button style="padding: 15px 30px; background-color: #FFDE59; color: #333; border: none; border-radius: 8px; cursor: pointer; font-family: 'Tan Nimbus', sans-serif; font-size: 18px;">
+                Choose a New Country
+            </button>
+        </a>
+    </div>
+    </a>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="https://www.cebupacificair.com/" target="_blank" style="text-decoration: none;">
+            <button style="padding: 15px 30px; background-color: #FFDE59; color: #333; border: none; border-radius: 8px; cursor: pointer; font-family: 'Tan Nimbus', sans-serif; font-size: 18px;">
+                Book Your Tickets Here!
+            </button>
+        </a>
+    </div>
+    <br>
+    </section>
+
+    <section id="europe">
+        <br>
+        <h1 align="center" style="font-size: 50px;">EUROPE</font></h1>
+        <p style="background-color: rgb(1, 72, 75); padding: 25px; border-radius: 15px;">Europe, a 
+        continent rich in history, culture, and natural beauty, beckons travelers with its diverse 
+        tapestry of experiences. From the charming cobblestone streets of medieval villages to the 
+        vibrant energy of modern cities, Europe is a captivating destination that seamlessly blends 
+        the old and the new.</p>
+        <br>
+        <br>
+        <h2 align="center" style="font-weight: bold; font-style: italic; background-color:rgb(1, 72, 75); padding: 20px; 
+        border-radius: 15px; color: #FFDE59; font-size: 40px;">Switzerland
+        </h2>
+     <img src="./Zurich.jpg" alt="Zürich" height="423" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Zürich</span>, Zurich, Switzerland, 
+            effortlessly combines the allure of its medieval Old Town with the contemporary charm of a global financial hub. Nestled between 
+            the picturesque Lake Zurich and the Swiss Alps, the city's cobblestone streets and iconic landmarks, such as the Grossmünster and 
+            Kunsthaus Zurich, weave a rich tapestry of history and culture. Zurich's commitment to sustainability and efficient public 
+            transportation enhances the visitor experience, providing easy access to the bustling Bahnhofstrasse for luxury shopping or the 
+            serene shores of Lake Zurich for a tranquil escape into nature.</p>
+            <p>This Swiss gem caters to diverse interests, from exploring world-class museums to savoring a range of culinary delights. Zurich's 
+            unique blend of historical significance, modern sophistication, and natural beauty makes it an exceptional destination for those seeking 
+            a well-rounded and enriching travel experience.</p>
+     </div>
+     <br>
+     <img src="./geneva.jpg" alt="Geneva" height="554.5" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Geneva</span>, Switzerland, nestled 
+            on the shores of Lake Geneva at the western edge of the Alps, is a captivating city renowned for its picturesque landscapes, 
+            cosmopolitan atmosphere, and rich cultural tapestry. As the diplomatic hub of the world, Geneva is home to numerous international 
+            organizations, including the United Nations and the International Red Cross. The city exudes an air of elegance with its well-preserved 
+            historic architecture, such as the iconic Jet d'Eau fountain, which gracefully shoots water 140 meters into the air against the backdrop 
+            of the stunning Mont Blanc.</p>
+            <p>What makes Geneva truly exceptional as a travel destination is its seamless blend of natural beauty and urban sophistication. Visitors 
+            can stroll along the charming Old Town, explore the world-class museums, indulge in delectable Swiss cuisine, and unwind in the tranquil 
+            parks along the lakefront. The city's commitment to humanitarian causes and global cooperation adds a unique dimension to its appeal, making 
+            it not only a visually striking destination but also a place where the world comes together. Whether you're interested in exploring cultural 
+            institutions, enjoying outdoor activities, or simply savoring the serene ambiance, Geneva stands out as a great place to visit, offering a 
+            harmonious blend of history, nature, and international influence.</p>
+     </div>
+     <br>
+     <img src="./Zermatt.jpg" alt="Zermatt" height="576.5" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Zermatt</span>, Nestled in the heart of 
+            the Swiss Alps, Zermatt is a picturesque and charming mountain village that captivates visitors with its stunning natural beauty and 
+            iconic backdrop of the majestic Matterhorn. Renowned for its car-free status, Zermatt transports you to a tranquil world where electric 
+            taxis and horse-drawn carriages gracefully navigate charming cobblestone streets, creating an atmosphere of serenity and clean mountain 
+            air. The village is a haven for outdoor enthusiasts, offering a plethora of activities ranging from world-class skiing and snowboarding 
+            in the winter to exhilarating hiking and mountaineering during the summer months.</p>
+            <p>What sets Zermatt apart as a premier destination is its unique blend of alpine charm and modern luxury. The village boasts a wealth 
+            of high-end hotels, gourmet restaurants, and boutique shops, ensuring a comfortable and indulgent stay. The mesmerizing views of the
+            Matterhorn from almost every corner of Zermatt, coupled with the abundance of outdoor adventures and upscale amenities, make it an 
+            unparalleled destination for those seeking a perfect blend of relaxation and exhilaration in the lap of Switzerland's breathtaking 
+            mountain landscape. Zermatt's timeless allure, coupled with its commitment to sustainable tourism, makes it a great place to experience 
+            the pinnacle of alpine beauty and hospitality.</p>
+        </div>
+        <br>
+        <br>
+        <h2 align="center" style="font-weight: bold; font-style: italic; background-color:rgb(1, 72, 75); padding: 20px; 
+        border-radius: 15px; color: #FFDE59; font-size: 40px;">Italy
+        </h2>
+     <img src="./rome.jpg" alt="rome" height="641.5" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Rome</span>, Italy, stands as a 
+            captivating blend of ancient grandeur and modern vibrancy, making it a timeless destination that effortlessly bridges the gap 
+            between past and present. Nestled along the Tiber River, this iconic city is a living testament to the might of the Roman Empire, 
+            with its awe-inspiring remnants like the Colosseum, Roman Forum, and Pantheon. The Vatican City, an independent city-state enclaved 
+            within Rome, adds to the city's allure with St. Peter's Basilica and the Sistine Chapel, showcasing some of the most renowned 
+            masterpieces in art and architecture. Rome's cobblestone streets, lined with charming cafes, piazzas, and Renaissance-era fountains, 
+            invite visitors to immerse themselves in the city's rich history while savoring its delightful cuisine.</p>
+            <p>Beyond its historical treasures, Rome captivates visitors with its lively atmosphere and cultural richness. The energy of the city 
+            is palpable as locals and tourists alike meander through vibrant neighborhoods like Trastevere, known for its narrow winding streets 
+            and authentic Roman ambiance. The city's culinary scene is a gastronomic delight, offering a mouthwatering array of pasta, pizza, and 
+            gelato. Rome's warm Mediterranean climate ensures that outdoor attractions, from the iconic Spanish Steps to the picturesque Villa 
+            Borghese gardens, are enjoyed to the fullest. With its unparalleled blend of historical significance, cultural richness, and culinary 
+            delights, Rome stands as a must-visit destination for those seeking an unforgettable journey through the heart of Italy.</p>
+     </div>
+     <br>
+     <img src="./venice.jpg" alt="Venice" height="620.5" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Venice</span>, Italy, renowned as 
+            the "City of Canals," is a mesmerizing and unique destination that captivates visitors with its unparalleled charm. Nestled in 
+            the heart of the Venetian Lagoon, this enchanting city is a masterpiece of architectural marvels, featuring a network of winding 
+            canals, historic bridges, and magnificent palaces that seem to float on the water. The iconic Grand Canal, the city's main 
+            waterway, is adorned with elegant gondolas and vaporettos, providing an unforgettable transportation experience amidst the 
+            picturesque backdrop of centuries-old buildings. Venice's rich history is palpable as visitors wander through narrow cobblestone 
+            streets, encountering landmarks like St. Mark's Basilica with its intricate mosaics and the iconic Rialto Bridge.</p>
+            <p>Beyond its architectural wonders, Venice's cultural allure is equally compelling. The city hosts the renowned Venice Biennale, 
+            a world-famous art exhibition, and offers a plethora of museums and galleries showcasing masterpieces from various periods. Additionally, 
+            the delectable Venetian cuisine, featuring fresh seafood, risotto, and delectable pastries, beckons food enthusiasts to indulge in a 
+            culinary journey. With its romantic ambiance, historical significance, and cultural richness, Venice stands as an extraordinary destination 
+            that promises an immersive and unforgettable experience, making it a must-visit for those seeking a blend of history, art, and enchanting 
+            landscapes.
+         </p>
+     </div>
+     <br>
+     <img src="./milan.jpg" alt="Milan" height="576.5" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Milan</span>, Italy, is a dynamic and 
+            cosmopolitan city that seamlessly blends rich history with modern sophistication. Renowned as the global capital of fashion and 
+            design, Milan stands as a testament to Italy's cultural and artistic legacy. The city's iconic landmarks, such as the magnificent 
+            Cathedral of Milan (Duomo di Milano) and the historic Sforza Castle, showcase its architectural grandeur and historical significance. 
+            Milan is also a hub of creativity, with world-class museums like the Pinacoteca di Brera housing an impressive collection of Italian 
+            Renaissance art. The vibrant Brera district further adds to the city's charm, offering quaint streets lined with boutiques, cafes, 
+            and art galleries.</p>
+            <p>Beyond its cultural richness, Milan captivates visitors with its unparalleled shopping scene, featuring renowned fashion districts 
+            like the Quadrilatero della Moda. From high-end luxury boutiques to trendy street-style shops, Milan is a paradise for fashion enthusiasts.
+            Additionally, the city's culinary scene is a gastronomic delight, boasting authentic Italian cuisine in traditional trattorias and innovative 
+            dishes in contemporary eateries. Milan's welcoming atmosphere, combined with its artistic treasures, fashion allure, and delectable cuisine, 
+            makes it an enticing destination for travelers seeking a perfect blend of history, culture, and modern elegance.</p>
+     </div>
+     <br>
+     <br>
+        <h2 align="center" style="font-weight: bold; font-style: italic; background-color:rgb(1, 72, 75); padding: 20px; 
+        border-radius: 15px; color: #FFDE59; font-size: 40px;">France
+        </h2>
+     <img src="./paris.jpg" alt="Paris" height="554.5" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Paris</span>, often referred 
+            to as the "City of Light," stands as an iconic metropolis nestled along the banks of the Seine River. Renowned for its 
+            rich history, exquisite architecture, and unparalleled cultural charm, Paris is a destination that captivates the hearts 
+            of millions. The cityscape is adorned with world-famous landmarks, including the Eiffel Tower, Notre-Dame Cathedral, and 
+            the Louvre Museum, housing masterpieces like the Mona Lisa. The historic neighborhoods, such as Montmartre and Le Marais, 
+            boast cobblestone streets lined with charming cafes, boutiques, and art studios, creating an enchanting atmosphere that 
+            invites exploration.</p>
+            <p>Paris is not merely a feast for the eyes; it also satisfies the palate with its delectable culinary scene. The city is 
+            synonymous with gourmet cuisine, offering an array of exquisite French dishes and pastries. From the bustling markets to 
+            the Michelin-starred restaurants, visitors can indulge in the flavors of France. Beyond the gastronomic delights, Paris 
+            hosts a vibrant cultural scene, featuring world-class theaters, galleries, and music venues. Whether strolling along the 
+            Seine, savoring a croissant in a sidewalk cafe, or immersing oneself in the cultural treasures, Paris exudes an irresistible 
+            allure that makes it a must-visit destination for travelers seeking an unforgettable experience.</p>
+     </div>
+     <br>
+     <img src="./provence.jpg" alt="Provence" height="555" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Provence</span>, located in the 
+            southeastern region of France, is a picturesque and enchanting destination that captivates visitors with its stunning landscapes, 
+            rich cultural heritage, and vibrant local charm. Renowned for its lavender fields, olive groves, and vineyards, Provence boasts 
+            a breathtaking countryside that is a feast for the senses. The region is dotted with quaint medieval villages, each exuding its 
+            unique character, and historic towns such as Avignon, Aix-en-Provence, and Arles, where visitors can immerse themselves in the art, 
+            history, and architecture that define the area.</p>
+            <p>Beyond its natural beauty, Provence offers a culinary experience that is second to none. The region is a haven for food enthusiasts, 
+            with its open-air markets bursting with fresh produce, aromatic herbs, and local delicacies. From indulging in flavorful wines to savoring 
+            traditional Provencal dishes like ratatouille and bouillabaisse, the gastronomic delights of the region are a highlight for any traveler. 
+            Whether exploring the vibrant markets, meandering through lavender fields in bloom, or wandering the narrow cobblestone streets of ancient 
+            villages, Provence beckons with a timeless allure that makes it a must-visit destination for those seeking an authentic and unforgettable 
+            French experience.
+         </p>
+     </div>
+     <br>
+     <img src="./bordeaux.jpg" alt="Bordeaux" height="598.5" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Bordeaux</span>, nestled along the 
+            banks of the Garonne River in southwestern France, Bordeaux is a city that effortlessly marries rich history, exquisite 
+            architecture, and world-renowned wine culture. Steeped in centuries of heritage, Bordeaux boasts a beautifully preserved 
+            historic center that has earned it a UNESCO World Heritage designation. Stroll through the charming cobblestone streets lined 
+            with 18th-century buildings, elegant squares, and the iconic Place de la Bourse, a masterpiece of classical architecture facing 
+            the river. The city's vibrant cultural scene is accentuated by its numerous museums, such as the contemporary art-focused CAPC 
+            Musée d'Art Contemporain and the immersive wine experience at La Cité du Vin.</p>
+            <p>Bordeaux's reputation as a global wine capital adds an extra layer of allure to its charm. Surrounded by prestigious vineyards, 
+            the city serves as the gateway to the renowned Bordeaux wine region. Visitors can embark on wine-tasting tours in the nearby 
+            vineyards of Saint-Émilion, Médoc, or Pessac-Léognan, immersing themselves in the world of Bordeaux's exceptional wines. The city's 
+            culinary scene further complements the wine experience with delightful gastronomic offerings. Whether exploring historic landmarks, 
+            indulging in delectable cuisine, or savoring world-class wines, Bordeaux encapsulates the essence of a truly exceptional destination, 
+            making it an enticing and unforgettable place to visit.</p>
+     </div>
+     <div style="text-align: center; margin-top: 20px;">
+        <a href="#country" style="text-decoration: none;">
+            <button style="padding: 15px 30px; background-color: #FFDE59; color: #333; border: none; border-radius: 8px; cursor: pointer; font-family: 'Tan Nimbus', sans-serif; font-size: 18px;">
+                Choose a New Country
+            </button>
+        </a>
+    </div>
+    </a>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="https://www.cebupacificair.com/" target="_blank" style="text-decoration: none;">
+            <button style="padding: 15px 30px; background-color: #FFDE59; color: #333; border: none; border-radius: 8px; cursor: pointer; font-family: 'Tan Nimbus', sans-serif; font-size: 18px;">
+                Book Your Tickets Here!
+            </button>
+        </a>
+    </div>
+    <br>
+    </section>
+
+    <section id="american">
+        <br>
+        <h1 align="center" style="font-size: 50px;">AMERICA</font></h1>
+        <p style="background-color: rgb(1, 72, 75); padding: 25px; border-radius: 15px;">America, the land of diverse landscapes, 
+        cultures, and opportunities, beckons travelers with its unparalleled blend of natural wonders and vibrant cities. From the 
+        iconic skylines of New York City and the entertainment hub of Los Angeles to the breathtaking beauty of the Grand Canyon and 
+        the serene coasts of the Pacific Northwest, the United States offers an array of experiences for every type of adventurer.</p>
+        <br>
+        <br>
+        <h2 align="center" style="font-weight: bold; font-style: italic; background-color:rgb(1, 72, 75); padding: 20px; 
+        border-radius: 15px; color: #FFDE59; font-size: 40px;">Canada
+        </h2>
+     <img src="./toronto.jpg" alt="toronto" height="577" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Toronto</span>, Discover the vibrant allure 
+            of Toronto, Canada's cosmopolitan gem, and find yourself immersed in a dynamic cityscape where modernity seamlessly intertwines with 
+            cultural richness. Towering over the skyline is the iconic CN Tower, offering panoramic views of the city and Lake Ontario. Toronto 
+            is a melting pot of diverse neighborhoods, each with its unique character, from the historic Distillery District to the trendy Queen 
+            Street West. Indulge your taste buds in the eclectic food scene, explore world-class museums such as the Royal Ontario Museum, and 
+            stroll along the picturesque waterfront. With a multicultural spirit reflected in its festivals and events, Toronto beckons visitors 
+            with its warm hospitality, making it a must-visit destination that captures the essence of Canada's dynamic urban life.</p>
+            <p>Beyond the urban vibrancy, Toronto is a gateway to natural wonders. Just a short drive away, you can explore the awe-inspiring 
+            Niagara Falls or escape to the tranquility of the Toronto Islands. The city's efficient public transportation system allows easy 
+            access to these nearby attractions, making Toronto the perfect base for a diverse and enriching Canadian experience. Whether you're 
+            drawn to the bustling city life or the serenity of nature, Toronto invites you to embrace a harmonious blend of culture, adventure, 
+            and exploration in one captivating destination.</p>
+     </div>
+     <br>
+     <img src="./montreal.jpg" alt="Montreal" height="467" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Montreal</span>, Discover the enchanting city of 
+            Montreal, where European charm meets North American allure. Nestled in the province of Quebec, this cosmopolitan gem beckons with its historic 
+            architecture, vibrant arts scene, and culinary delights. Wander through the cobbled streets of Old Montreal, where centuries-old buildings blend 
+            seamlessly with modern boutiques and cafes. Immerse yourself in the city's rich cultural tapestry by exploring world-class museums, attending 
+            lively festivals, or taking in the dynamic street art that adorns the neighborhoods.</p>
+            <p>Montreal's culinary scene is a feast for the senses, boasting diverse flavors from French-inspired bistros to trendy food markets. Indulge in 
+            iconic dishes like poutine and bagels, and savor the city's reputation as a gastronomic hub. With its welcoming atmosphere, cultural vibrancy, and 
+            a perfect fusion of old and new, Montreal promises an immersive experience that captivates visitors and makes it a must-visit destination in Canada</p>
+     </div>
+     <br>
+     <img src="./vancouver.jpg" alt="vancouver" height="533" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Vancouver</span>, Nestled between the Pacific 
+            Ocean and the stunning Coast Mountain Range, Vancouver, Canada, beckons as a captivating destination that seamlessly blends urban 
+            sophistication with natural beauty. Renowned for its picturesque waterfront, the city offers a diverse array of outdoor activities, 
+            from exploring Stanley Park's lush trails to enjoying the panoramic views from Grouse Mountain. Vancouver's vibrant neighborhoods, 
+            such as Granville Island and Gastown, boast eclectic markets, artisanal shops, and a thriving culinary scene, making it a haven for 
+            food enthusiasts and culture seekers alike.</p>
+            <p>Beyond its captivating landscapes and cultural offerings, Vancouver's friendly and inclusive atmosphere adds to its allure. The 
+            city's commitment to sustainability and outdoor recreation makes it an ideal destination for those seeking a balance between cosmopolitan 
+            experiences and the tranquility of nature. Whether wandering through the iconic Capilano Suspension Bridge Park, strolling along the 
+            scenic Seawall, or immersing yourself in the diverse cultural events, Vancouver invites visitors to embrace a harmonious blend of urban 
+            sophistication and breathtaking natural wonders.</p>
+        </div>
+        <br>
+        <br>
+        <h2 align="center" style="font-weight: bold; font-style: italic; background-color:rgb(1, 72, 75); padding: 20px; 
+        border-radius: 15px; color: #FFDE59; font-size: 40px;">United States of America (U.S.A)
+        </h2>
+     <img src="./LA.jpg" alt="Los Angeles" height="533" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Los Angeles</span>, Los Angeles, the glittering 
+            gem of the West Coast, beckons visitors with its irresistible blend of glamour, culture, and endless sunshine. Home to the iconic Hollywood 
+            sign, this city is the entertainment capital of the world, offering a chance to stroll down the Walk of Fame, explore the historic TCL 
+            Chinese Theatre, and perhaps catch a glimpse of your favorite celebrity. The vibrant arts scene extends beyond Hollywood, with world-class 
+            museums like the Getty Center and the Los Angeles County Museum of Art showcasing diverse collections. From the trendy boutiques of Beverly 
+            Hills to the laid-back vibes of Venice Beach, Los Angeles is a melting pot of styles and experiences.</p>
+            <p>Beyond the glamour, Los Angeles boasts stunning natural beauty, from the Pacific coastline to the nearby mountains. Take a scenic drive along 
+            the Pacific Coast Highway, relax on the sandy beaches, or hike in the picturesque Santa Monica Mountains. With a culinary scene as diverse as its 
+            population, Los Angeles invites you to savor a wide array of cuisines, from street tacos to fine dining. Whether you're drawn to the glitz of 
+            Hollywood, the cultural richness, or the outdoor adventures, a visit to Los Angeles promises a dynamic and unforgettable experience.</p>
+     </div>
+     <br>
+     <img src="./chicago.jpg" alt="Chicago" height="467" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Chicago</span>, a dynamic metropolis nestled 
+            on the shores of Lake Michigan, is a compelling destination for both culture enthusiasts and urban explorers alike. Renowned for its 
+            stunning architecture, the city boasts iconic landmarks such as the Willis Tower and the historic Wrigley Building. Chicago's vibrant 
+            arts scene is showcased in world-class museums like the Art Institute of Chicago, while Millennium Park offers a modern urban oasis with 
+            its iconic "Cloud Gate" sculpture. Beyond the cultural riches, the city is a culinary haven, famed for its deep-dish pizza and diverse 
+            dining options, ensuring that every palate is satisfied.</p>
+            <p>Embrace the rhythm of Chicago's lively neighborhoods, each with its unique charm, from the historic streets of Old Town to the trendy 
+            vibes of Wicker Park. The city's commitment to innovation and its welcoming spirit create an atmosphere that resonates with visitors, making 
+            Chicago a must-visit destination where tradition and modernity converge in a breathtaking urban landscape.
+         </p>
+     </div>
+     <br>
+     <img src="./new york.jpg" alt="New York" height="598" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">New York</span>, the city that 
+            never sleeps, is a captivating metropolis that beckons visitors with its iconic skyline, cultural richness, and boundless energy. 
+            Home to landmarks like Times Square, Central Park, and the Statue of Liberty, New York offers a unique blend of history, art, and 
+            modernity. Wander through the diverse neighborhoods, from the trendy streets of Brooklyn to the historic charm of Harlem, and immerse 
+            yourself in the world-renowned museums, theaters, and culinary delights. The city's vibrancy is palpable, whether you're exploring the 
+            high-end boutiques of Fifth Avenue or enjoying a slice of pizza in a bustling corner pizzeria. With Broadway shows, world-class dining, 
+            and a melting pot of cultures, New York promises an unparalleled experience for those seeking the pulse of urban life.</p>
+            <p>Beyond the iconic landmarks, New York's cultural mosaic unfolds in its neighborhoods, each with its own character and charm. Traverse 
+            the High Line, a transformed elevated railway, for a unique perspective of the city's architecture and green spaces. Engage in the city's 
+            pulsating nightlife, from rooftop bars with stunning views to eclectic underground venues. New York is a global hub where dreams are made, 
+            making it a must-visit destination for those eager to be immersed in the excitement, diversity, and endless possibilities that define this 
+            extraordinary city</p>
+     </div>
+     <br>
+     <br>
+        <h2 align="center" style="font-weight: bold; font-style: italic; background-color:rgb(1, 72, 75); padding: 20px; 
+        border-radius: 15px; color: #FFDE59; font-size: 40px;">Brazil
+        </h2>
+     <img src="./rio.jpg" alt="Rio" height="489" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Rio De Janeiro</span>, a city 
+            pulsating with energy and adorned with breathtaking natural beauty, is an irresistible destination for any traveler. Nestled 
+            between lush mountains and the azure Atlantic Ocean, Rio captivates with its iconic landmarks such as the Christ the Redeemer 
+            statue standing majestically atop Corcovado Mountain. Immerse yourself in the vibrant culture as the rhythms of samba fill 
+            the air during the exhilarating Carnival festivities, showcasing the city's passion and lively spirit.</p>
+            <p>Beyond the festivities, Rio de Janeiro offers pristine beaches like Copacabana and Ipanema, where the sun-drenched shores 
+            invite relaxation and water sports. Explore the historic neighborhoods of Santa Teresa and Lapa, filled with charming colonial 
+            architecture and bohemian vibes. Whether hiking to the summit of Sugarloaf Mountain for panoramic views or savoring Brazilian 
+            cuisine in local markets, Rio de Janeiro promises an unforgettable blend of natural wonders, cultural richness, and an 
+            infectious zest for life that make it a must-visit destination.</p>
+     </div>
+     <br>
+     <img src="./sao paulo.jpg" alt="sao paulo" height="577" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">São Paulo</span>, the pulsating 
+            heart of Brazil, beckons visitors with its vibrant energy and dynamic cultural scene. As South America's largest city, São 
+            Paulo boasts a kaleidoscope of experiences, from its bustling markets and eclectic street art to its world-renowned gastronomy. 
+            Dive into the diverse neighborhoods like Vila Madalena, where the streets are adorned with colorful murals, or explore the historic 
+            district of Centro with its architectural gems. The city's culinary landscape is a gastronomic delight, with an array of traditional 
+            Brazilian dishes, international cuisine, and innovative food scenes that make São Paulo a paradise for food enthusiasts. Whether 
+            reveling in the excitement of its lively nightlife or immersing oneself in its rich cultural offerings, São Paulo is an urban playground 
+            that captivates with its spirited charm.</p>
+            <p>Beyond its urban vibrancy, São Paulo also serves as a gateway to the natural wonders of Brazil. Take a short trip to the nearby Atlantic 
+            Rainforest or venture further to the beautiful coastline. São Paulo's central location makes it an ideal starting point for exploring the 
+            diverse landscapes and cultural treasures that Brazil has to offer. With its blend of modernity and tradition, São Paulo invites you to experience 
+            the captivating rhythm of Brazilian life in a city that never sleeps.
+         </p>
+     </div>
+     <br>
+     <img src="./Fernando de Noronha.jpg" alt="Fernando de Noronha" height="423" width="400" align="left" style="margin-bottom: 10px; margin-right: 40px;">
+     <div style="text-align: justify; background-color: rgb(1, 72, 75); padding: 20px; border-radius: 15px;">
+            <p><span style="font-weight: bold; font-style: italic; color: #FFDE59; font-size: 35px;">Fernando de Noronha</span>, an enchanting 
+            archipelago off the coast of Brazil, beckons travelers with its pristine beauty and ecological wonders. Renowned for its crystal-clear 
+            turquoise waters, vibrant coral reefs, and diverse marine life, the island is a paradise for snorkelers and scuba divers. The idyllic 
+            beaches, such as Baía do Sancho consistently voted one of the world's best, offer secluded stretches of golden sands framed by dramatic 
+            cliffs, creating a picturesque escape for relaxation and solitude.</p>
+            <p>Beyond its stunning natural landscapes, Fernando de Noronha is committed to sustainable tourism, limiting the number of visitors to 
+            preserve its delicate ecosystem. The island's commitment to conservation makes it an ideal destination for those seeking an eco-friendly 
+            and ethereal retreat, where the unparalleled beauty of nature is both preserved and celebrated.</p>
+     </div>
+     <div style="text-align: center; margin-top: 20px;">
+        <a href="#country" style="text-decoration: none;">
+            <button style="padding: 15px 30px; background-color: #FFDE59; color: #333; border: none; border-radius: 8px; cursor: pointer; font-family: 'Tan Nimbus', sans-serif; font-size: 18px;">
+                Choose a New Country
+            </button>
+        </a>
+    </div>
+    </a>
+    <br>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="https://www.cebupacificair.com/" target="_blank" style="text-decoration: none;">
+            <button style="padding: 15px 30px; background-color: #FFDE59; color: #333; border: none; border-radius: 8px; cursor: pointer; font-family: 'Tan Nimbus', sans-serif; font-size: 18px;">
+                Book Your Tickets Here!
+            </button>
+        </a>
+    </div>
+    <br>
+    <br>
+    <br>
+    
+    </section>
+  
+</body>
+</html>
